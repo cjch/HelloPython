@@ -45,8 +45,16 @@ d = a//b	#整除
 print c, d
 
 t1 = 0; t2 = 10
-r2 = t1 and t2
+r1 = t1 and t2
 if r1:
 	print "true"
 else:
 	print "false"
+
+#语句
+count = 0
+while count < 5:
+	print count, " is less than 5"
+	count += 1
+else:
+	print count, " is not less than 5"

@@ -1,4 +1,4 @@
-## HelloPython
+# HelloPython
 
 ###中文编码
 Python默认使用ASCII格式，要正确解析中文需要在文件头添加`#coding=utf-8` 或 `#-*- coding:utf-8 -*-`
@@ -50,7 +50,23 @@ Python区分大小写，关键字只包含小写字母
 
 身份运算符：`is, is not` 判断两个标识符是否引用同一个对象
 
+###语句
 
+python不支持switch，只能使用多个elif来实现
+
+```
+if condition:
+	state1
+elif condition1:
+	state2
+else:
+	state3
+
+```
+
+`pass`语句是空语句，只是为了保持程序结构的完整性。
+
+循环语句可使用else语句，该语句在循环正常完成后执行。
 
 
 
