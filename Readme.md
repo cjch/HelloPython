@@ -1,5 +1,17 @@
 # HelloPython
 
+##chama.py
+iOS中插码时，将字符串定义成变量。将所有的事件定义集中到文件中，然后批量进行处理。
+
+```
+// @"EventCode"
+extern NSString * const EventCode;			// .h
+NSString * const EventCode = @"EventCode";	// .m
+```
+
+EventCode 转换成  
+
+
 ##中文编码
 Python默认使用ASCII格式，要正确解析中文需要在文件头添加`#coding=utf-8` 或 `#-*- coding:utf-8 -*-`
 
