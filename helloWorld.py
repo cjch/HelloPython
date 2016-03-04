@@ -58,3 +58,45 @@ while count < 5:
 	count += 1
 else:
 	print count, " is not less than 5"
+
+#time & calendar
+import time, calendar
+
+tick = time.time()
+localTime = time.localtime(tick)
+localTime1 = time.asctime(localTime)
+print tick
+print localTime
+print localTime1
+print time.timezone, time.tzname
+
+cal = calendar.month(2016, 3)
+print cal
+
+print calendar.monthcalendar(2016, 3)
+print calendar.calendar(2016)
+
+
+#函数
+def funcSum ( arg1, arg2 ):
+	"返回两个数的和"
+	total = arg1 + arg2
+	return total
+
+
+lmdSum = lambda a1, a2: a1 + a2 #匿名函数 lambda表达式
+
+print funcSum(11, 12)
+print lmdSum(11, 12)
+
+total = 0
+
+def funAdd ( arg1, arg2 ):
+	global total
+	total = arg1 + arg2
+	return total
+
+print total
+print funAdd(1, 2)
+print total
+
