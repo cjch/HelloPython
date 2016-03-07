@@ -9,9 +9,6 @@ extern NSString * const EventCode;			// .h
 NSString * const EventCode = @"EventCode";	// .m
 ```
 
-EventCode 转换成  
-
-
 ##中文编码
 Python默认使用ASCII格式，要正确解析中文需要在文件头添加`#coding=utf-8` 或 `#-*- coding:utf-8 -*-`
 
@@ -196,3 +193,44 @@ finally:
 raise	[exception]	#主动触发异常
 ```
 
+##面向对象
+
+类方法的第一个参数必须为self
+
+```
+class Object:
+	'类的帮助信息'   				#类文档字符串
+	classProperty = 0 			#类变量
+	
+	def __init__(self, v1):		#初始化方法
+		self.property1 = v1		
+		Object.classProperty = 1
+		
+	def display(self):
+		print "instance: " + self.value1
+		print "Object: %d" Object.classProperty
+	
+	def __del__(self):			#析构函数
+		class_name = self.__class__.__name__
+		print class_name, "销毁"
+		
+
+class SubObject(Object):		#继承语法	
+...
+
+#子类和实例判断
+issubclass()
+isinstance(Obj, Class)
+```
+
+访问属性使用`.`语法，也可使用：
+
+```
+getattr(obj, name[, default])
+hasattr(obj, name)
+setattr(obj, name, value)
+delattr(obj, name)
+```
+不允许实例访问私有数据，但可以借助`instance._className__attrName`访问私有属性。
+
+使用引用计数追踪内存中的对象，管理对象的销毁。跟oc不同，python有循环垃圾收集器，用来清理未引用的循环。
